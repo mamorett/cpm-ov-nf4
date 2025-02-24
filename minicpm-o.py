@@ -1,9 +1,7 @@
 import warnings
-import logging
 import torch
 from PIL import Image
 from transformers import AutoModel, AutoTokenizer
-# from model_handlers import MiniCPMoHandler  # Import the class
 from pathlib import Path
 import os
 from tqdm import tqdm
@@ -15,11 +13,6 @@ import time
 # Suppress all warnings
 warnings.filterwarnings('ignore')
 
-# Configure logging to be as quiet as possible
-logging.getLogger().setLevel(logging.ERROR)
-logging.getLogger("transformers").setLevel(logging.ERROR)
-logging.getLogger("auto_gptq").setLevel(logging.ERROR)
-logging.getLogger("safetensors").setLevel(logging.ERROR)
 
 CONFIG = {
     'model_path': '2dameneko/MiniCPM-o-2_6-nf4',
