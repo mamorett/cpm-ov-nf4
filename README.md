@@ -1,10 +1,10 @@
 <div align="center">
 <pre>
- ████  ██████ ██   ██         ████  ██  ██        ██   ██ ██████ ????? 
-██     ██  ██ ███ ███        ██  ██ ██  ██        ███  ██ ██     ????? 
-██     ██████ ██ █ ██ ██████ ██  ██ ██  ██ ██████ ██ █ ██ ████   ????? 
-██     ██     ██   ██        ██  ██  ████         ██  ███ ██     ????? 
- ████  ██     ██   ██         ████    ██          ██   ██ ██     ????? 
+ ████  ██████ ██   ██         ████  ██  ██        ██   ██ ██████  
+██     ██  ██ ███ ███        ██  ██ ██  ██        ███  ██ ██      
+██     ██████ ██ █ ██ ██████ ██  ██ ██  ██ ██████ ██ █ ██ ████    
+██     ██     ██   ██        ██  ██  ████         ██  ███ ██      
+ ████  ██     ██   ██         ████    ██          ██   ██ ██      
 </pre>
 </div>
 <p align="center">
@@ -64,7 +64,7 @@
 
 ##  Overview
 
-The cpm-ov project is an open-source AI-powered image-to-text generation tool that leverages the int4 quantized version of [**MiniCPM-o 2.6**](https://huggingface.co/openbmb/MiniCPM-o-2_6) model to generate text based on input images.   
+The cpm-ov-nf4 project is an open-source AI-powered image-to-text generation tool that leverages the int4 quantized version of [**MiniCPM-o 2.6**](https://huggingface.co/openbmb/MiniCPM-o-2_6) model to generate text based on input images.   
 Running with int4 version would use lower GPU memory (about 9GB). MiniCPM-o is the latest series of end-side multimodal LLMs (MLLMs) ungraded from MiniCPM-V. The models can now take images, video, text, and audio as inputs and provide high-quality text and speech outputs in an end-to-end fashion. This script processes images using [2dameneko/MiniCPM-o-2_6-nf4](https://huggingface.co/2dameneko/MiniCPM-o-2_6-nf4) quantized model to generate text descriptions based on customizable prompts. It can handle both single images and directories, supporting various image formats including JPG, JPEG, PNG, BMP, and WebP.
 
 ---
@@ -83,7 +83,7 @@ Running with int4 version would use lower GPU memory (about 9GB). MiniCPM-o is t
 ##  Project Structure
 
 ```sh
-└── cpm-ov/
+└── cpm-ov-nf4/
     ├── LICENSE
     ├── README.md
     ├── minicpm-o.py
@@ -93,7 +93,7 @@ Running with int4 version would use lower GPU memory (about 9GB). MiniCPM-o is t
 
 ###  Project Index
 <details open>
-	<summary><b><code>CPM-OV/</code></b></summary>
+	<summary><b><code>CPM-OV-NF4/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
 		<summary><b>__root__</b></summary>
 		<blockquote>
@@ -387,8 +387,8 @@ Processing complete. Successfully processed 40 out of 40 images.
 ##  Project Roadmap
 
 - [X] **`Task 1`**: <strike>Directory process.</strike>
-- [ ] **`Task 2`**: GPTQModel support, once [PR](https://github.com/ModelCloud/GPTQModel/pull/1116) will be approved and merged.
-- [ ] **`Task 3`**: API integration with text2img services.
+- [ ] **`Task 2`**: Make a node for ComfyUI
+- [ ] **`Task 3`**: Publish model to use with Replicate.
 
 ---
 
