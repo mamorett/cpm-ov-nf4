@@ -64,8 +64,8 @@ def load_model_and_tokenizer():
             trust_remote_code=True,            
             local_files_only=False,            
             init_vision=True,
-            init_audio=True,
-            init_tts=True,            
+            init_audio=False,
+            init_tts=False,            
             device_map=CONFIG['device']
         )
         model.eval()
