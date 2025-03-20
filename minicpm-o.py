@@ -69,8 +69,6 @@ def load_model_and_tokenizer():
             device_map=CONFIG['device']
         )
         model.eval()
-        model.init_tts()
-        model.tts.float()
         
         tokenizer = AutoTokenizer.from_pretrained(
             CONFIG['model_path'],
